@@ -17,23 +17,23 @@ import static org.junit.Assert.*;
 public class SecKillDaoTest {
 
     @Autowired
-    private SecKillDao secKillDao;
+    private SeckillDao seckillDao;
 
     @Test
     public void reduceNumber() throws Exception {
-        int updateCount = secKillDao.reduceNumber(1000L, new Date());
+        int updateCount = seckillDao.reduceNumber(1000L, new Date());
         assertEquals(updateCount, 1);
     }
 
     @Test
     public void queryById() throws Exception {
-        Seckill seckill = secKillDao.queryById(1000);
+        Seckill seckill = seckillDao.queryById(1000);
         assertNotNull(seckill);
     }
 
     @Test
     public void queryAll() throws Exception {
-        List<Seckill> seckills = secKillDao.queryAll(0, 10);
+        List<Seckill> seckills = seckillDao.queryAll(0, 10);
         assertEquals(4, seckills.size());
     }
 

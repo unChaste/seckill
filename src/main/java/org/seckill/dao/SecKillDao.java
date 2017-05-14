@@ -6,7 +6,7 @@ import org.seckill.entity.Seckill;
 import java.util.Date;
 import java.util.List;
 
-public interface SecKillDao {
+public interface SeckillDao {
 
     int reduceNumber(@Param("seckillId") long seckillId, @Param("killTime") Date killTime);
 
